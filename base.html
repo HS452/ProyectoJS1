@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafío 1 - JavaScript</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <section>
+        <div class="card">
+            <div class="img-card"></div>
+              <h6>Laptop Gamer AMD</h6>
+              <p>Precio base: $<span class="precio-inicial"></span> </p>
+        
+              <p>Cantidad:
+                <span class="cantidad">0</span>
+
+                <!-- Boton para sumar contador-->
+                <button onclick=" { const cantidadHtml=document.querySelector('.cantidad');       
+                 cantidadHtml.innerHTML = Number(cantidadHtml.innerHTML)+1; 
+                 const totalHtml=document.querySelector('.valor-total');       
+                 totalHtml.innerHTML = 400000 * Number(cantidadHtml.innerHTML); 
+                 }"  >+</button> 
+                 <!-- const total (Permite actualizar precio total)   --> 
+                   
+
+                 <!-- Boton para restar contador-->
+                 <button onclick="{ const cantidadHtml=document.querySelector('.cantidad');  
+                  let cantidadActual = Number(cantidadHtml.innerHTML);
+                 if (cantidadActual > 0) {cantidadHtml.innerHTML = cantidadActual - 1;}
+                 const totalHtml=document.querySelector('.valor-total');       
+                 totalHtml.innerHTML = 400000 * Number(cantidadHtml.innerHTML); 
+                }" >-</button>
+                <!-- If (permite que al restar llegue hasta 0 evitando numero de cantidad queden en negativo) -->   
+                <!-- const total (Permite actualizar precio total)   -->   
+              </p>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="total-section">
+        <p>Total a pagar: $<span class="valor-total"></span> </p>
+    </div>
+
+    <script src="index.js">
+      
+
+    </script>
+</body>
+</html>
